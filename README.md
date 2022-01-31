@@ -5,7 +5,7 @@ Software prerequisites:<br>
 <ul>GNU bash, version 5.1.8(1)-release (x86_64-redhat-linux-gnu)</ul>
 <ul>YAD 9.3 (GTK+ 3.24.31)</ul>
 
-![alt text](https://github.com/nahorov/Bootable-Creation/edit/main/screenshot.png?raw=true)
+![alt text](https://github.com/nahorov/Bootable-Creation/blob/main/screenshot.png?raw=true)
 
 To run, first make sure you have sudoer rights. Then, do the following:<br>
 ```
