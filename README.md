@@ -12,10 +12,12 @@ $ sh usb.sh
 ```
 <br>
 Or you could turn it into an executable with<br>
+
 ```
 $ chmod +x usb.sh
 ```
-and then
+and then<br>
+
 ```
 $ ./usb.sh
 ```
