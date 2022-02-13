@@ -44,6 +44,14 @@ and then<br>
 $ ./usb.sh
 ```
 <br>
-The form is designed to give a GUI to the dd command. 
+The form is designed to give a GUI to the dd command, and it works in the following steps:
+<ol>
+<li>List disk: This is to select the flash drive you want to burn the image on from the rest of the removable media this drop-down menu shows. This menu will only list the paths to devices which are removable. Therefore system partitions will not be shown.<\li>
+<li>Select ISO: This is to select the ISO file or the image file on which the image of the desired operating system is stored.<\li>
+<li>Select Block Size: This is to select the block size in which the image will be written to the disk in binary format. 4096 bytes is the default option, although later systems also tolerate 8192 bytes easily.<\li>
+<\ol>
+Once this information has been supplied, click 'OK' and proceed, agree with the warning popup, and that is it. Your bootable USB will be ready in no time. The process is designed to be as efficient as having done it with text in the terminal itself, but without actually having to develop familiarity with the Linux partitioning system and advanced terminal commands in general.<br>
+Please note that once you have submitted the information to the form successfully, all data on your selected removable flash media drive will be lost irretrievably, and act accordingly. <br>
+
 
 
