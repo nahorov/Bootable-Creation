@@ -11,12 +11,12 @@ done
 
 # Declaring the contents of the combo-boxes that shall appear in the form
 device_menu=$(echo "$joined")
-cluster_size_menu=$(echo "4096 bytes (default),1024 bytes,2048 bytes,8192 bytes")
+cluster_size_menu=$(echo "4096 bytes (default),1024 bytes,2048 bytes,8192 bytes, 512 bytes")
 # The form itself, the front-end interface in YAD, where all the choices made get saved as a singular string
 OUTPUT=$(yad --title="Bootable-Creation-Alpha." --text="Device Properties and Format Options." \
 	--form --separator="," --item-separator="," --width=660\
 	--field="List Disk":CBE\
-	--field="Select ISO":FL --file-filter \*.iso --file-filter \*.img --file-filter \* \
+	--field="Select ISO":FL --file-filter '*.iso' --file-filter '*.img' --file-filter \* \
 	--field="Cluster size":CBE\
 	"$device_menu" "" "$cluster_size_menu")
 accepted=$?
@@ -33,7 +33,7 @@ device_path_selected=$(lsblk -O | grep $device_name | awk '{print $3}')
 # Making a variable out of the path of the image-file selected
 image_file_selected=$(awk -F, '{print $2}' <<<$OUTPUT)
 
-# Making a usable variable out of the block-size created
+# Making a usable variable out of the block-size created and hardsetting it
 cluster_size=$(awk -F, '{print $3}' <<<$OUTPUT)
 cluster_size_in_kb=$(sed 's/\s.*$//' <<<$cluster_size)
 case $cluster_size_in_kb in
