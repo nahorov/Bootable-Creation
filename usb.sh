@@ -11,7 +11,7 @@ done
 
 # Declaring the contents of the combo-boxes that shall appear in the form
 device_menu=$(echo "$joined")
-cluster_size_menu=$(echo "4096 bytes (default),1024 bytes,2048 bytes,8192 bytes, 512 bytes")
+cluster_size_menu=$(echo "4096 bytes (default),1024 bytes,2048 bytes,8192 bytes,512 bytes")
 # The form itself, the front-end interface in YAD, where all the choices made get saved as a singular string
 OUTPUT=$(yad --title="Bootable-Creation-Alpha." --text="Device Properties and Format Options." \
 	--form --separator="," --item-separator="," --width=660\
